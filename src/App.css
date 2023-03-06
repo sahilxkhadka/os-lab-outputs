@@ -18,6 +18,8 @@
 }
 body {
     overflow-x: hidden;
+    background-color: rgba(52, 53, 65, 1);
+
 }
 .login-container {
     min-height: 100vh;
@@ -39,6 +41,19 @@ body {
     margin-bottom: 20px;
     background-color: rgb(255, 255, 224, 0.1);
 }
+.slide-contaner {
+    width: 100%;
+    
+}
+.hide {
+    display: none;
+}
+.slick-slider {
+    width: 100%;
+}
+.slick-slider:last-child {
+    display: none;
+}
 
 .login-container h2 {
     font-weight: 400;
@@ -59,6 +74,9 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+.download-btn {
+    margin: 0 auto;
 }
 .verify-btn:hover {
     background-color: #18935f;
@@ -104,6 +122,7 @@ body {
 }
 .output-container h2 {
     text-align: center;
+    color: #fff;
 }
 .output-terminal {
     background-color: #271b1b;
@@ -117,9 +136,14 @@ body {
 .output-path {
     margin-bottom: 8px;
 }
+
 .output-path span {
     margin-right: 6px;
     font-family: 'Consola';
+    background-color: transparent;
+    outline: none;
+    border: none;
+    max-width: min-content;
 }
 .output-path .user-name {
     color: rgb(20, 223, 20);
@@ -187,7 +211,32 @@ body {
   .btn:active .icon {
     transform: scale(0.85);
   }
+  .arrows-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .arrows-container button {
+    background: #FFFFFF;
+        border: 1px solid #DDDDDD;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+  }
+  .arrows-container img {
+    width: 24px;
+  }
+  .arrows-container button:hover {
+    background-color: rgba(149, 152, 160, 0.3);
 
+  }
+ .output-container:last-child {
+    display: none;
+ } 
+
+.arrows-container .previousButton {
+    rotate: 180deg;
+}
 @media screen and (max-width: 768px) {
     .output-terminal {
         width: 100%;
