@@ -1,38 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+@font-face {
+    font-family: 'Consola';
+    src: url('./CONSOLA.TTF');
+    font-weight: 400;
+    font-style: normal;
+}
 .App {
-  text-align: center;
+    min-height: 100vh;
+    width: 100vw;
+
+}
+body {
+    overflow-x: hidden;
+}
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(52, 53, 65, 1);
+    color: #ffffe0;
+}
+.login-container .profile {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 224);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 224, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-container h2 {
+    font-weight: 400;
+    font-size: 16px;
+}
+.login-container h2:nth-child(2) {
+    margin-bottom: 8px;
+}
+.login-container h2:nth-child(3) {
+    margin-bottom: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.verify-btn {
+    background-color: #19c37d;
+    color: #ffffe0;
+    padding: 6px 12px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.verify-btn:hover {
+    background-color: #18935f;
+}
+
+.login-container input {
+    margin-bottom: 16px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #a39696;
+    padding: 6px 12px;
+    color: #ffffe0;
+    font-size: 14px;
+    border-radius: 6px;
+    width: 240px;
+}
+.error-msg {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.logout-btn {
+    margin: 1rem 1rem 0 auto;
+}
+.outputs-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 40px;
+    font-family: 'Consola';
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.output-container {
+    margin: 0 auto;
+    margin-top:1rem;
+    width: 100%;
+    font-family: 'Consola';
+    font-size: 14px;
+    
+}
+.output-container h2 {
+    text-align: center;
+}
+.output-terminal {
+    background-color: #271b1b;
+    padding: 32px;
+    width: 60%;
+    text-align: left;
+    margin: 1rem auto;
+    min-height: 400px;
+    color: silver;
+}
+.output-path {
+    margin-bottom: 8px;
+}
+.output-path span {
+    margin-right: 6px;
+    font-family: 'Consola';
+}
+.output-path .user-name {
+    color: rgb(20, 223, 20);
+}
+.output-path .mingw {
+    color: rgb(239, 82, 239);
+}
+.output-path .file-path {
+    color: yellow;
+}
+.output-trigger {
+    margin-bottom: 4px;
+    font-family: 'Consola';
+}
+.output-main {
+    font-family: 'Consola';
+    max-width: 70%;
+}
+.btn {
+    width: 240px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background: #271b1b;
+    color: silver;
+    cursor: pointer;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .btn:hover {
+    box-shadow: 0 0 20px 0px #2e2e2e3a;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .btn .icon {
+    position: absolute;
+    height: 40px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
   }
+  
+  .btn .text {
+    transform: translateX(55px);
+  }
+  
+  .btn:hover .icon {
+    width: 240px;
+  }
+  
+  .btn:hover .text {
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  
+  .btn:active .icon {
+    transform: scale(0.85);
+  }
+
+@media screen and (max-width: 768px) {
+    .output-terminal {
+        width: 100%;
+    }
 }
+
+
+
+
