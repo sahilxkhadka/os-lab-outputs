@@ -20,6 +20,16 @@ Waiting for child thread to finish...
 Child thread finished.
 Parent thread finished. `
     },
+    {
+        id: "lab-1-output-3",
+        labName : "Lab 1 Output 3",
+        labCount : "3",
+        labOutput : `Parent thread started. ID: ${generateRandom(1100, 4000)}
+Child thread started. ID: ${generateRandom(4000, 12000)}
+Waiting for child thread to finish...
+Child thread finished.
+Parent thread finished.`
+    },
 ]
 
 export default labOutputsDetails
