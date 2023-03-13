@@ -53,7 +53,10 @@ function LabOutputs({ loginSuccess }) {
                                 html2canvas(element).then((canvas) => {
                                     const imgData = canvas.toDataURL('image/png');
                                     const pdf = new jsPDF();
-                                    pdf.addImage(imgData, 'PNG', 0, 15);
+                                    pdf.addImage(imgData, 'PNG', 10, 15);
+                                    
+                                     {/* pdf.addImage(imgData, 'PNG', 50, 15, 200, 200 ); */}
+
                                     pdf.save(`${lab.id}.pdf`);
                                 });
                             }

@@ -14,11 +14,13 @@ Child Process created with process ID: ${generateRandom(13000, 17000)} `
         id: "lab-1-output-2",
         labName : "Lab 1 Output 2",
         labCount : "2",
-        labOutput : `Parent thread started. ID: ${generateRandom(11000, 15000)}
-Child thread started. ID: ${generateRandom(20000, 25000)}
-Waiting for child thread to finish...
-Child thread finished.
-Parent thread finished. `
+        labOutput : `Main thread ID: 1
+Process ID: ${generateRandom(100, 1000)}
+This statement is being printed under thread 3 with ID: 2
+This statement is being printed under thread 3 with ID: 3
+This statement is being printed under thread 4 with ID: 4
+This statement is being printed under thread 0 with ID: 5
+This statement is being printed under thread 1 with ID: 6 `
     },
     {
         id: "lab-1-output-3",
