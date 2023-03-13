@@ -50,13 +50,14 @@ function LabOutputs({ loginSuccess }) {
                         labOutputsDetails.map((lab, index) => {
                             const downloadImage = () => {
                                 const element = document.getElementById(lab.id);
-                                html2canvas(element).then((canvas) => {
+                                html2canvas(element, { dpi: 300 }).then((canvas) => { // Increase the DPI to 300
                                     const imgData = canvas.toDataURL('image/png');
                                     const pdf = new jsPDF();
                                     pdf.addImage(imgData, 'PNG', 0, 15);
                                     pdf.save(`${lab.id}.pdf`);
                                 });
-                            }
+                            };
+
                             return (
                                 <>
                                     <div key={lab.id} className={`slide-container`}>
