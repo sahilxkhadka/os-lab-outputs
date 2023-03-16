@@ -1,6 +1,6 @@
 import html2canvas from "html2canvas"
 import jsPDF from 'jspdf';
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import labOutputsDetails from "../details";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,7 +8,8 @@ import Slider from "react-slick";
 import rightArrow from '../images/right-arrow.svg'
 
 function LabOutputs({ loginSuccess }) {
-
+    const slider = useRef(null);
+    const [activeIndex, setActiveIndex] = useState(1)
     const name = localStorage.getItem("name")
     const symbol = localStorage.getItem("symbol")
     const logout = () => {
@@ -27,7 +28,6 @@ function LabOutputs({ loginSuccess }) {
         className: "slider",
         draggable: true,
     };
-    const slider = useRef(null);
     const scrollToPrev = () => {
         slider?.current?.slickPrev();
     };
@@ -44,10 +44,21 @@ function LabOutputs({ loginSuccess }) {
                     <span className="text">Logout</span>
                 </button>
             </div>
+            <div className="navs-container">
+                {
+                    labOutputsDetails.map((item, index) => {
+                        return (
+                            <button className={`btn download-btn nav-btn ${activeIndex === index ? "focused-btn" : ""}`}  key={index} onClick = {() => setActiveIndex(index)}>
+                                Lab {index + 1}
+                            </button>
+                        )
+                    })
+                }
+            </div>
             <div className="outputs-container">
                 <Slider ref={slider} {...settings} >
                     {
-                        labOutputsDetails.map((lab, index) => {
+                        labOutputsDetails[activeIndex].map((lab, index) => {
                             const downloadImage = () => {
                                 const element = document.getElementById(lab.id);
                                 html2canvas(element, { dpi: 300 }).then((canvas) => { // Increase the DPI to 300

@@ -243,6 +243,36 @@ body {
     }
 }
 
+.navs-container {
+    display: flex;
+    max-width: 70%;
+    margin: 2rem auto;
+    /* flex-wrap: wrap; */
+    gap: 2rem;
+    justify-content: center;
+}
+.nav-btn {
+    width: 120px;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.nav-btn:hover {
+    color: #271b1b;
+    background-color: #DDDDDD;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+.nav-btn:focus {
+    box-shadow: 9px 7px 60px -12px silver;
+
+}
+.focused-btn {
+    background-color: #fff;
+    color: #000;
+
+}
+
 
 
 
