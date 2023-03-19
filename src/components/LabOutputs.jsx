@@ -9,7 +9,7 @@ import rightArrow from '../images/right-arrow.svg'
 
 function LabOutputs({ loginSuccess }) {
     const slider = useRef(null);
-    const [activeIndex, setActiveIndex] = useState(1)
+    const [activeIndex, setActiveIndex] = useState(0)
     const name = localStorage.getItem("name")
     const symbol = localStorage.getItem("symbol")
     const logout = () => {
