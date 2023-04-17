@@ -66,6 +66,43 @@ Waiting for child thread to finish...
 Child thread finished.
 Parent thread finished.`
         },
+    ],
+    [
+      {
+        id: "lab-3-output-1",
+        labName: "Lab 3 Output 1",
+        labCount: "3",
+        labOutput: `Enter the no of processes : 2
+
+Enter the no of resources : ${generateRandom(1, 10)}
+
+Enter the Max Matrix for each process : 
+For process 0 : ${generateRandom(1, 10)}
+${generateRandom(1, 10)}
+6
+
+For process 1 : ${generateRandom(1, 10)}
+${generateRandom(1, 10)}
+${generateRandom(1, 10)}
+
+Enter the allocation for each process : 
+For process 0 : ${generateRandom(1, 10)}
+${generateRandom(1, 10)}
+${generateRandom(1, 10)}
+
+For process 1 : ${generateRandom(1, 10)}
+${generateRandom(1, 10)}
+${generateRandom(1, 10)}
+
+Enter the Current Available Resources with OS : ${generateRandom(1, 10)}
+${generateRandom(1, 10)}
+${generateRandom(1, 10)}
+
+Process 0 runs to completion!
+Process 1 runs to completion!
+The system is in a safe state!!
+Safe Sequence : < 0 1 > `
+      }
     ]
 ]
 
