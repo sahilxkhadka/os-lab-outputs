@@ -110,32 +110,46 @@ Safe Sequence : < 0 1 > `
       labName: "Lab 5 Output 1",
       labCount: "5",
       labOutput: `
+
                         Memory Management Scheme - First Fit
-Enter the number of blocks:6
-Enter the number of processes:5
+Enter the number of blocks:2
+Enter the number of processes:3
 
 Enter the size of the blocks:-
-Block no.1:24
-Block no.2:28
-Block no.3:56
-Block no.4:66
-Block no.5:85
-Block no.6:96
+Block no.1:128
+Block no.2:256
 
 Enter the size of the processes :-
-Process no.1:2
-Process no.2:3
-Process no.3:5
-Process no.4:8
-Process no.5:6
+Process no.1:64
+Process no.2:48
+Process no.3:128
 
-Block no.  size          process no.        size
-1          1997332848    1                  1997308285
-2          24            2                  2
-3          28            3                  3
-4          56            4                  5
-5          66            5                  8
-6          85            Not allocated
+Block no.  size          process no.   size
+1          1997332848    1             1997308285
+2          128           2              64
+`
+    },
+    {
+      id: "lab-5-output-2",
+      labName: "Lab 5 Output 2",
+      labCount: "5",
+      labOutput: `
+Memory Management Scheme - Best Fit
+Enter the number of blocks:2
+Enter the number of processes:3
+
+Enter the size of the blocks:-
+Block no.1:64
+Block no.2:128
+
+Enter the size of the processes :-
+Process no.1:32
+Process no.2:48
+Process no.3:16
+
+Process_no  Process_size  Block_no   Block_size  Fragment
+1           32            1          64          32
+2           48            2          128         80
 `
     }
   ]
