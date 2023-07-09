@@ -81,7 +81,7 @@ Average Turnarond Tine: 19.67`
     {
       id: "lab-2-output-3",
       labName: "Lab 2 Output 3",
-      labCount: "3",
+      labCount: "2",
       labOutput: `Enter the number of processes: 4
 Enter the arrival time, burst time, and priority for each process:
 Process[l]: 0
