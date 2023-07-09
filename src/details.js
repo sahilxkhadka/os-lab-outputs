@@ -39,32 +39,70 @@ Parent thread finished.`
     {
       id: "lab-2-output-1",
       labName: "Lab 2 Output 1",
-      labCount: "1",
+      labCount: "2",
       labOutput:
-        `This code is running in the parent process. ID: ${generateRandom(1300, 1700)}
-Child Process created with process ID: ${generateRandom(13000, 17000)} `
+        `Enter the number of processes: 4
+Enter the arrival tine and burst tine for each process:
+Process[1]: 0
+10
+Process[2]: 1
+6
+process[3]: 3
+2
+Process[4]: 5
+4
+Process Arrival Time  Burst Time  waitin Time  Turnaround Time
+P[1]    0             10          0            10
+P[2]    1             6           9            15
+P[3]    3             2           13           15
+P[4]    5             4           13           17
+Average Waiting Time: 8.75
+Average Turnaround Time: 14.25`
     },
     {
       id: "lab-2-output-2",
       labName: "Lab 2 Output 2",
       labCount: "2",
-      labOutput: `Main thread ID: 1
-Process ID: ${generateRandom(100, 1000)}
-This statement is being printed under thread 3 with ID: 2
-This statement is being printed under thread 3 with ID: 3
-This statement is being printed under thread 4 with ID: 4
-This statement is being printed under thread 0 with ID: 5
-This statement is being printed under thread 1 with ID: 6 `
+      labOutput: `Enter the number of processes: 4
+Enter the arrival tine and burst tine for each process:
+Process[1]: 0
+10
+Process[2]: 0
+5
+process[3]: 0
+8
+Process Arrival Time  Burst Time  waitin Time  Turnaround Time
+P[1]    0             10          13           23
+P[2]    0             5           10           15
+P[3]    0             8           13           21
+Average waiting Time: 12.00
+Average Turnarond Tine: 19.67`
     },
     {
       id: "lab-2-output-3",
       labName: "Lab 2 Output 3",
       labCount: "3",
-      labOutput: `Parent thread started. ID: ${generateRandom(1100, 4000)}
-Child thread started. ID: ${generateRandom(4000, 12000)}
-Waiting for child thread to finish...
-Child thread finished.
-Parent thread finished.`
+      labOutput: `Enter the number of processes: 4
+Enter the arrival time, burst time, and priority for each process:
+Process[l]: 0
+10
+Process[2]: 1
+6
+2
+Process[3]: 3
+2
+4
+Process[4]: 5
+4
+5
+Process Arrival Time  Burst Time  Priority  waitin Time  Turnaround Time
+P[1]    0             10          10         0            10
+P[2]    1             6           16         9            15
+P[3]    3             2           18         13           15
+P[4]    5             4           22         13           17
+Average Waiting Time: 8.75
+Average Turnaround Time: 14.25
+`
     },
   ],
   [
@@ -162,6 +200,55 @@ Total page faults: 6`
       id: "lab-5-output-1",
       labName: "Lab 5 Output 1",
       labCount: "5",
+      labOutput: `
+
+                        Memory Management Scheme - First Fit
+Enter the number of blocks:2
+Enter the number of processes:3
+
+Enter the size of the blocks:-
+Block no.1:128
+Block no.2:256
+
+Enter the size of the processes :-
+Process no.1:64
+Process no.2:48
+Process no.3:128
+
+Block no.  size          process no.   size
+1          1997332848    1             1997308285
+2          128           2             64
+`
+    },
+    {
+      id: "lab-5-output-2",
+      labName: "Lab 5 Output 2",
+      labCount: "5",
+      labOutput: `
+Memory Management Scheme - Best Fit
+Enter the number of blocks:2
+Enter the number of processes:3
+
+Enter the size of the blocks:-
+Block no.1:64
+Block no.2:128
+
+Enter the size of the processes :-
+Process no.1:32
+Process no.2:48
+Process no.3:16
+
+Process_no  Process_size  Block_no   Block_size  Fragment
+1           32            1          64          32
+2           48            2          128         80
+`
+    }
+  ],
+  [
+    {
+      id: "lab-6-output-1",
+      labName: "Lab 6 Output 1",
+      labCount: "6",
       labOutput: `
 
                         Memory Management Scheme - First Fit
