@@ -249,47 +249,79 @@ Process_no  Process_size  Block_no   Block_size  Fragment
       id: "lab-6-output-1",
       labName: "Lab 6 Output 1",
       labCount: "6",
+      labOutput: `Enter the number of disk requests: 6
+Enter the requests: I
+36
+16
+34
+9
+12
+Enter the initial position of head: 11
+Order of execution: 11 -> 1 -> 36 -> 16 -> 34 -> 9 -> 12
+Total seek time: 111`
+    },
+    {
+      id: "lab-6-output-2",
+      labName: "Lab 6 Output 2",
+      labCount: "6",
       labOutput: `
-
-                        Memory Management Scheme - First Fit
-Enter the number of blocks:2
-Enter the number of processes:3
-
-Enter the size of the blocks:-
-Block no.1:128
-Block no.2:256
-
-Enter the size of the processes :-
-Process no.1:64
-Process no.2:48
-Process no.3:128
-
-Block no.  size          process no.   size
-1          1997332848    1             1997308285
-2          128           2             64
+Enter the number of disk requests (up to 100): 6
+Enter the disk requests:
+Request 1: 1
+Request 2: 36
+Request 3: 16
+Request a: 34
+Request 5: 9
+Request 6: 12
+Enter the initial position of the disk head: 11
+SSTF Disk Scheduling:
+Initial Head position: 11
+Order of Disk Access:
+Request 1: 12
+Request 2: 9
+Request 3: 16
+Request a: 1
+Request 5: 34
+Request 6: 36
+Total seek Time: 61
+Path: 12 9 16 1 34 36
 `
     },
     {
-      id: "lab-5-output-2",
-      labName: "Lab 5 Output 2",
-      labCount: "5",
+      id: "lab-6-output-3",
+      labName: "Lab 6 Output 3",
+      labCount: "6",
       labOutput: `
-Memory Management Scheme - Best Fit
-Enter the number of blocks:2
-Enter the number of processes:3
-
-Enter the size of the blocks:-
-Block no.1:64
-Block no.2:128
-
-Enter the size of the processes :-
-Process no.1:32
-Process no.2:48
-Process no.3:16
-
-Process_no  Process_size  Block_no   Block_size  Fragment
-1           32            1          64          32
-2           48            2          128         80
+Enter the number of disk requests:
+Enter the requests: 1
+36
+16
+34
+9
+12
+6
+Enter the initial position of head: 11
+Enter the direction of head movement (0 for left, 1 for right): 0
+Order of execution: 11 -> 9 -> 1 -> 1 -> 9 -> 12 -> 16 -> 34 -> 36
+Total seek time: 45
+`
+    },
+    {
+      id: "lab-6-output-4",
+      labName: "Lab 6 Output 4",
+      labCount: "6",
+      labOutput: `
+Enter the number of disk requests: 6
+Enter the requests: 1
+36
+16
+34
+9
+12
+Enter the initial position of head: 11
+Enter the end of the cylinder: 50
+12 -> 16 -> 34 -> 36 -> 1 -> 9
+Total seek time: 68
 `
     }
   ]
