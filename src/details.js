@@ -139,8 +139,8 @@ Page Table: 66 -1 -1 F
 Page Faults: 4`
     },
     {
-      id: "lab-4-output-2",
-      labName: "Lab 4 Output 2",
+      id: "lab-4-output-3",
+      labName: "Lab 4 Output 3",
       labCount: "4",
       labOutput: `Enter the number of frames: 4
 Enter the number of pages: 6
