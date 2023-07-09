@@ -106,6 +106,59 @@ Safe Sequence : < 0 1 > `
   ],
   [
     {
+      id: "lab-4-output-1",
+      labName: "Lab 4 Output 1",
+      labCount: "4",
+      labOutput: `Enter the frame size: 2
+Enter the number of pages: 2
+Enter the page numbers:
+10
+12
+FIFO Page Replacement Algorithm
+Page Table: 10 -1 F
+Page Table: 10 12 F
+Page Faults: 2
+Page Hits: 0`
+    },
+    {
+      id: "lab-4-output-2",
+      labName: "Lab 4 Output 2",
+      labCount: "4",
+      labOutput: `Enter the frame size: 3
+Enter the number of pages: 4
+Enter the page numbers:
+12
+58
+69
+66
+Optimal Page Replacement Algorithm
+Page Table: 12 -1 -1 F
+Page Table: 58 -1 -1 F
+Page Table: 69 -1 -1 F
+Page Table: 66 -1 -1 F
+Page Faults: 4`
+    },
+    {
+      id: "lab-4-output-2",
+      labName: "Lab 4 Output 2",
+      labCount: "4",
+      labOutput: `Enter the number of frames: 4
+Enter the number of pages: 6
+Enter the page reference string: 12
+15 18
+24 52 69
+
+Current frame state: 12 -1 -1 -1
+Current frame state: 12 15 -1 -1
+Current frame state: 12 15 18 -1
+Current frame state: 12 15 18 24
+Current frame state: 52 15 18 24
+Current frame state: 52 69 18 24
+Total page faults: 6`
+    }
+  ],
+  [
+    {
       id: "lab-5-output-1",
       labName: "Lab 5 Output 1",
       labCount: "5",
@@ -126,7 +179,7 @@ Process no.3:128
 
 Block no.  size          process no.   size
 1          1997332848    1             1997308285
-2          128           2              64
+2          128           2             64
 `
     },
     {

@@ -92,7 +92,7 @@ function LabOutputs({ loginSuccess }) {
 							key={index}
 							onClick={() => setActiveIndex(index)}
 						>
-							Lab {index === 3 ? index + 2 : index + 1}
+							Lab {index + 1}
 						</button>
 					);
 				})}
